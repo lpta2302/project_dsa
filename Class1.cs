@@ -295,7 +295,7 @@ public class HTMLChecker
                             results.Enqueue("<"+tagContent);
                         else{
                             //thẻ mở không được bắt đầu bằng dấu cách
-                            if (tagContent.StartsWith(' '))
+                            if (tagContent.StartsWith(" "))
                             {
                                 tagContent = getTagName(tagContent, true);
                                 noteError(tagContent,i+1,errors,true);
