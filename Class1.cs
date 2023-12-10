@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System;
 using System.Text.RegularExpressions;
+using System.IO;
 //Class để lưu trữ các lỗi dưới dạng tên tag và chỉ số dòng
 public class Data
 {
@@ -240,7 +241,7 @@ public class HTMLChecker
         //bỏ comment
         html = Regex.Replace(html,@"<!--([\s\S]*?)-->","");
         //tách từng dòng
-        string[] lines = html.Split("\n");
+        string[] lines = html.Split('\n');
         MyQueue<string> results = new MyQueue<string>();
         MyInputRestrictedQueue openTags = new MyInputRestrictedQueue();
         MyPriorityQueue errors = new MyPriorityQueue();
